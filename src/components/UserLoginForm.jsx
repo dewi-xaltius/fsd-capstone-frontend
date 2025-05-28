@@ -21,7 +21,7 @@ const UserLoginForm = ({ onLogin, onShowRegistration }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/users/login', formData);
+      const response = await axios.post('http://localhost:8080/api/login', formData);
       setMessage('Login successful!');
       console.log('Login response:', response.data);
       onLogin(response.data); // Pass user data to App.jsx
